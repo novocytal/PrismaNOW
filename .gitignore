@@ -1,0 +1,10 @@
+*.json
+*.pyc
+__pycache__
+.idea
+data
+lib
+!data/trivia/*
+!data/audio/playlists/*
+*.exe
+*.dll
