@@ -837,6 +837,7 @@ class Owner:
     @commands.command(no_pm=True, passcontext=True) # TODO: Debug
     @checks.is_owner()
     async def say(self, msg):
+        """Say something in a specific channel. + for space and \plus for +."""
         mesg = msg.replace("+", " ")
         mesg_b = mesg.replace("\plus", "+")
         await self.bot.say(mesg_b)
