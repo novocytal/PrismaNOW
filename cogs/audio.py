@@ -17,7 +17,7 @@ with suppress(Exception):
     player = MusicPlayer
 
 __author__ = "novocytal"
-__version__ = "2.0 beta build 394"
+__version__ = "2.2.1 beta build 394"
 
 log = logging.getLogger("red.audio")
 

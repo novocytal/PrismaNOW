@@ -834,6 +834,14 @@ class Owner:
         else:
             await self.bot.say("Your message has been sent.")
 
+    @commands.command(no_pm=True, passcontext=True) # TODO: Debug
+    @checks.is_owner()
+    async def say(self, msg):
+        mesg = msg.replace("+", " ")
+        mesg_b = mesg.replace("\plus", "+")
+        await self.bot.say(mesg_b)
+        return
+
     @commands.command()
     async def info(self):
         """Shows info about prismaNOW"""
