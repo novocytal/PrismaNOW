@@ -1,4 +1,4 @@
-# prismaNOW • Listen to your favs on all major music plaforms.
+# prismaNOW • Listen to your favs from all major music plaforms.
 
 prismaNOW is a Discord music and social bot written in [Python](https://www.python.org "Python homepage") by [Twentysix](https://github.com/Cog-Creators/) (base code) and rewritten and modified by [novocytal](https://github.com/novocytal). It can host a conversation with you, invoke social features for a server, and you can listen to your favorite songs, and help others discover new songs they might like.
 
