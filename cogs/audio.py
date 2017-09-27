@@ -1,4 +1,4 @@
-import os, sys, os.path, time, discord, json, pafy, isodate, re, lyricwikia, requests, threading, logging, collections
+import os, sys, os.path, time, discord, json, pafy, isodate, re, lyricwikia, requests, threading, logging, collections, urllib
 import copy, asyncio, math, inspect, subprocess
 from __main__ import send_cmd_help, settings
 from random import shuffle, choice
@@ -2202,7 +2202,10 @@ def add_to_aux(url):
 
 
 def url_to_sec(url):
-    video_id = pafy.extract_video_id(url)
+    if "&list=" in url:
+        video_id = re.compile("/watch?v=(.*?)&list=")
+    else:
+        video_id = re.compile("/watch?v=(.*?)")
     api_key = "AIzaSyBy1oAs2O6gwcIbtqubzBrcwVw0gj7ExhI"
     searchUrl = "https://www.googleapis.com/youtube/v3/videos?id="+video_id+"&key="+api_key+"&part=contentDetails"
     response = urlopen(searchUrl).read()

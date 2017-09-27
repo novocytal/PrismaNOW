@@ -1,5 +1,5 @@
 import time
-class Caramba:
+class language:
     def __init__(self, bot):
         self.bot = bot
 
@@ -11,6 +11,7 @@ class Caramba:
                 pass
             else:
                 await self.bot.send_message(message.channel, fireflies_check)
+
             if message.content.lower().startswith('AYY') or message.content.startswith('AAYY') or message.content.startswith('AY'):
                 await self.bot.send_message(message.channel, '¡CARAMBA!')
             if message.content.startswith('ayy') or message.content.startswith('aayy') or message.content.startswith('ay'):
@@ -32,7 +33,7 @@ class Caramba:
 
 
 def setup(bot):
-    n = Caramba(bot)
+    n = language(bot)
     bot.add_listener(n.listener, "on_message")
     bot.add_cog(n)
 
@@ -98,9 +99,7 @@ def fireflies(message):
     elif "I got misty eyes as they said farewell said farewell" == message:
         return "But I'll know where several are"
     elif "I got misty eyes as they said farewell" == message:
-        time.sleep(2)
         return "(said farewell)"
-        return "But I'll know where several are"
     elif "But I'll know where several are" == message:
         return "If my dreams get real bizarre"
     elif "If my dreams get real bizarre" == message:
@@ -184,9 +183,7 @@ def fireflies(message):
         elif "I GOT MISTY EYES AS THEY SAID FAREWELL SAID FAREWELL" == message:
             return "BUT I'LL KNOW WHERE SEVERAL ARE"
         elif "I GOT MISTY EYES AS THEY SAID FAREWELL" == message:
-            time.sleep(2)
             return "(SAID FAREWELL)"
-            return "BUT I'LL KNOW WHERE SEVERAL ARE"
         elif "BUT I'LL KNOW WHERE SEVERAL ARE" == message:
             return "IF MY DREAMS GET REAL BIZARRE"
         elif "IF MY DREAMS GET REAL BIZARRE" == message:
@@ -270,9 +267,7 @@ def fireflies(message):
             elif "i got misty eyes as they said farewell said farewell" == message:
                 return "but i'll know where several are"
             elif "i got misty eyes as they said farewell" == message:
-                time.sleep(2)
                 return "(said farewell)"
-                return "but i'll know where several are"
             elif "but i'll know where several are" == message:
                 return "if my dreams get real bizarre"
             elif "if my dreams get real bizarre" == message:
