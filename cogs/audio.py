@@ -2206,7 +2206,7 @@ def url_to_sec(url):
         video_id = re.compile("/watch?v=(.*?)&list=")
     else:
         video_id = re.compile("/watch?v=(.*?)")
-    api_key = "AIzaSyBy1oAs2O6gwcIbtqubzBrcwVw0gj7ExhI"
+    api_key = "" # OBSCURED FOR PRIVACY REASONS
     searchUrl = "https://www.googleapis.com/youtube/v3/videos?id="+video_id+"&key="+api_key+"&part=contentDetails"
     response = urlopen(searchUrl).read()
     data = json.loads(response.decode())
